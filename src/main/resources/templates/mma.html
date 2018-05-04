@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Tort</title>
+    <title>Auto</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
     <link rel="stylesheet" href="/bootstrap.min.css" media="screen"/>
-    <link rel="Icon"  type="img/icon" href="images/myphoto.jpg"/>
-    <link rel="Icon"  type="img/icon" href="images/samsalar.jpg"/>
-    <link rel="Icon"  type="img/icon" href="images/tort2.jpg"/>
+    <link rel="Icon"  type="img/icon" href="images/mma1.jpg"/>
+    <link rel="Icon"  type="img/icon" href="images/mma2.jpg"/>
+    <link rel="Icon"  type="img/icon" href="images/mma3.jpg"/>
     <style>
         #h1{color:#28a745;size: 24px;}
-        body{background: #8de5f9;}
+        body{background: #b10b1c;}
         footer{ position: absolute; background:#a7b1f9; color: #343a40; width:10%; font-style:italic; text-align:right;}
         .header{position: absolute; margin-top: 10px; width: 500px; right: 150px;}
-        .header1{position: absolute; margin-top: 550px; width: 500px; right: 50px;}
+        .header1{position: absolute; margin-top: 500px; width: 500px; right: 50px;}
         .header2{position: absolute; margin-top: 20px; margin-bottom: 25px; width: 20px; right: 1500px;}
-        .header3{position: absolute; margin-top: 200px; width: 50px; right: 1480px;}
+        .header3{position: absolute; margin-top: 250px; width: 50px; right: 1480px;}
         .container{position: absolute; left: 430px; margin-top: 30px; width: 300px;}
     </style>
 </head>
 <div align="left" class="header1">
-    <img src="images/samsalar.jpg" alt="samsalar" height="200px" width="320px">
+    <img src="images/mma1.jpg" alt="mma1" height="360px" width="380px">
 </div>
 <div align="right" class="header">
-    <img src="images/myphoto.jpg" alt="myphoto" height="300px" width="520px"/>
-    <br><p>Tорт — десерт, состоящий из одного или нескольких коржей, пропитанных кремом или джемом.<br> Сверху торт обычно украшают кремом, глазурью или фруктами.</p>
+    <img src="images/mma2.jpg" alt="mma2" height="350px" width="520px"/>
+    <br><p>Auto mobile .</p>
 </div>
 <div align="left" class="header2">
-    <img src="images/samsalar.jpg" alt="samsalar" height="250px" width="360px">
+    <img src="images/mma3.jpg" alt="mma3" height="290px" width="360px">
 </div>
 
 <div align="center" class="header3">
-    <img src="images/tort2.jpg" alt="tort2" height="290px" width="370px">
+    <img src="images/mma2.jpg" alt="mma2" height="290px" width="370px">
 </div>
 
 <body>
@@ -39,10 +39,10 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="form-group">
-            <h1 id="h1">Tort</h1>
-            <form action="#" th:action="@{/torts/}" th:object="${tort}" method="POST">
+            <h1 id="h1">MMA</h1>
+            <form action="#" th:action="@{/mmas/}" th:object="${mma}" method="POST">
 
-                <label th:for="label">Name Tort</label>
+                <label th:for="label">Name MMA</label>
                 <input th:field="*{label}" class="form-control"/>
                 <span th:errors="*{label}" class="text-danger"></span>
                 Made in <label th:for="description"></label>
@@ -61,7 +61,7 @@
 </div>
 
 <footer>
-    &copy;ZhuldyzKulinaria
+    &copy;Erkebulan
 </footer>
 
 </body>

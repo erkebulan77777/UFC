@@ -1,12 +1,11 @@
 package com.example.biba.Model;
 
-
 import javax.persistence.*;
 import javax.validation.constraints.Pattern;
 import java.util.List;
 
 @Entity
-public class Samsa {
+public class Box {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -17,24 +16,24 @@ public class Samsa {
     private String email;
 
     @ManyToMany
-    private List<Tort> torts;
+    private List<Mma> mmas;
 
-    public Samsa(){
+    public Box(){
         super();
     }
 
-    public Samsa(int id, String firstName, String lastName, String email, List<Tort> torts){
+    public Box(int id, String firstName, String lastName, String email, List<Mma> mmas){
         this.id=id;
         this.firstName=firstName;
         this.lastName=lastName;
         this.email=email;
-        this.torts = torts;
+        this.mmas = mmas;
     }
-    public Samsa(String firstName, String lastName, String email, List<Tort> torts){
+    public Box(String firstName, String lastName, String email, List<Mma> mmas){
         this.firstName=firstName;
         this.lastName=lastName;
         this.email=email;
-        this.torts = torts;
+        this.mmas = mmas;
     }
 
     public int getId(){
@@ -65,16 +64,14 @@ public class Samsa {
         this.email=email;
     }
 
-    public List<Tort> getTorts() {
-        return torts;
+    public List<Mma> getMmas() {
+        return mmas;
     }
-    public void setTort(List<Tort> torts){
-        this.torts = torts;
-    }
+    public void setMma(List<Mma> mmas){this.mmas= mmas;}
 
-    public boolean hasTort(Tort tort){
-        for(Tort containedTort : getTorts()) {
-            if (containedTort.getId() == tort.getId() ){
+    public boolean hasMma(Mma mma){
+        for(Mma containedMma: getMmas()) {
+            if (containedMma.getId() == mma.getId() ){
                 return true;
             }
         }
